@@ -11,4 +11,4 @@
 /log/*
 !/log/.keep
 /tmp
-app/view/layout/application.html.erb
+app/views/layouts/application.html.erb
