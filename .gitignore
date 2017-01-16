@@ -12,3 +12,6 @@
 !/log/.keep
 /tmp
 drafts/application.html.erb
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
