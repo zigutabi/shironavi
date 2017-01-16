@@ -5,8 +5,8 @@ class CreateShiros < ActiveRecord::Migration
       t.string :hurigana
       t.integer :eria
       t.integer :city
-      t.float :latitude
-      t.float :longitude
+      t.decimal :latitude, precision: 11, scale: 8
+      t.decimal :longitude, precision: 11, scale: 8
       t.timestamps null: false
     end
   end
