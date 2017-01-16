@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115104310) do
+ActiveRecord::Schema.define(version: 20170116051324) do
 
   create_table "dt_shiros", force: :cascade do |t|
     t.string   "nm_shiro",      limit: 255
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 20170115104310) do
     t.float    "gm_lng",        limit: 24
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "shiros", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "hurigana",   limit: 255
+    t.integer  "eria",       limit: 4
+    t.integer  "city",       limit: 4
+    t.float    "location",   limit: 24
+    t.float    "latitude",   limit: 24
+    t.float    "longitude",  limit: 24
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
