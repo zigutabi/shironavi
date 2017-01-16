@@ -85,13 +85,15 @@ class Scraping
   # 日本緯度・経度から世界測地系の緯度を算出
   def self.change_pos_x(pos_x, pos_y)
     val = 0
-    val = pos_x - pos_x * 0.00010695 + pos_y * 0.000017464 + 0.0046017
+    #val = pos_x - pos_x * 0.00010695 + pos_y * 0.000017464 + 0.0046017
+    val = pos_x
     return val
   end
   # 日本緯度・経度から世界測地系の経度を算出
   def self.change_pos_y(pos_x, pos_y)
     val = 0
-    val = pos_y - pos_x * 0.000046038 - pos_y * 0.000083043 + 0.01004
+    #val = pos_y - pos_x * 0.000046038 - pos_y * 0.000083043 + 0.01004
+    val = pos_y
     return val
   end
 end
