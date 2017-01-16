@@ -1,6 +1,6 @@
 class MapController < ApplicationController
   def index
-    @shiros = Shiro.find_by(name: "松前城")
+    @shiros = Shiro.all
     @hash = Gmaps4rails.build_markers(@shiros) do |shiro, marker|
       marker.lat shiro.latitude
       marker.lng shiro.longitude
