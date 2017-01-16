@@ -33,12 +33,13 @@ class Scraping
       arr_ltn = ltn.split(",")
       shiro_lat = arr_ltn[0]
       shiro_lng = arr_ltn[1]
+      unless shiro_lat == 0 || shiro_lat.blank? || shiro_lng == 0 || shiro_lng.blank?
+        shiro = Shiro.new
+        shiro.name = shiro_name
+        shiro.latitude = shiro_lat
+        shiro.longitude = shiro_lng
+        shiro.save
+      end
     end
-
-    shiro = Shiro.new
-    shiro.name = shiro_name
-    shiro.latitude = shiro_lat
-    shiro.longitude = shiro_lng
-    shiro.save
   end
 end
